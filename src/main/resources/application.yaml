@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/delivery
+    username: pavelkaranda
+    password: bestuser
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+server:
+  port: 8082
+
+app:
+  integration:
+    food-delivery:
+      url: http://localhost:8080/food-delivery-service/order/
