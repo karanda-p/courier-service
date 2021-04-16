@@ -3,6 +3,6 @@ package ru.itfbgroup.courierservice.model;
 public enum Status {
 
     ACCEPTED,
-    DELIVERED,
+    DELIVERING,
     DONE;
 }

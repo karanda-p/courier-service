@@ -22,4 +22,7 @@ public class Task {
 
     @Column(name = "status")
     private Status status;
+
+    @Column(name = "address")
+    private String address;
 }
