@@ -2,7 +2,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/delivery
-    username: pavelkaranda
+    username: courier
     password: bestuser
   jpa:
     hibernate:
@@ -17,4 +17,7 @@ server:
 app:
   integration:
     food-delivery:
-      url: http://localhost:8080/food-delivery-service/order/
+      url: http://localhost:8080/food-delivery-service/
+  food-delivery-service:
+    username: courier
+    password: password

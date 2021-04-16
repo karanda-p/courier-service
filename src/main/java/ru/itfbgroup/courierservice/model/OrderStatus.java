@@ -4,7 +4,9 @@ public enum OrderStatus {
 
     DONE("Выполнен"),
     CANCELED("Отменен"),
-    CREATED("Выполняется");
+    CREATED("Выполняется"),
+    PAID("Оплачен"),
+    IN_PROGRESS("Передан в доставку");;
 
     private String value;
 

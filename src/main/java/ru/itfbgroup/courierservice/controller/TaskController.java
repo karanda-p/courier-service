@@ -16,7 +16,7 @@ public class TaskController {
 
     private final TaskService taskService;
 
-    @PostMapping
+    @PostMapping("/task")
     public Task createNewTask(@RequestBody Order order){
         return taskService.createNewTask(order);
     }

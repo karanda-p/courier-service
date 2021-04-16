@@ -13,12 +13,16 @@ import ru.itfbgroup.courierservice.repository.TaskRepository;
 public class TaskService {
 
     private final TaskRepository taskRepository;
+    private final FoodDeliveryServiceIntegration foodDeliveryServiceIntegration;
 
     @Transactional
     public Task createNewTask(Order order){
         Task task = new Task();
+        task.setOrderId(order.getId());
         task.setAddress(order.getAddress());
         task.setStatus(Status.ACCEPTED);
-        return taskRepository.save(task);
+        Task savedTask = taskRepository.save(task);
+//        foodDeliveryServiceIntegration.sendTaskToFoodDeliveryService(savedTask);
+        return savedTask;
     }
 }

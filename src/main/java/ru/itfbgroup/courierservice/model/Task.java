@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class Task {
 
     @Id
-    @SequenceGenerator(sequenceName = "task_seq", name = "task_id_gen")
+    @SequenceGenerator(sequenceName = "task_seq", name = "task_id_gen",allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "task_id_gen")
     private Long id;
 
