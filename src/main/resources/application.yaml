@@ -8,6 +8,11 @@ spring:
     hibernate:
       ddl-auto: none
     show-sql: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 server:
   port: 8082
@@ -21,3 +26,8 @@ app:
   food-delivery-service:
     username: courier
     password: password
+
+message:
+  courier-queue: courierQueue
+  food-delivery-routing-key: message.fds.courier
+  courier-routing-key: message.courier
